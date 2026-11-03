@@ -1,0 +1,332 @@
+/* ===== WealthPath Finance Blog — Stylesheet ===== */
+:root {
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --primary-light: #ccfbf1;
+  --dark: #0f172a;
+  --gray: #64748b;
+  --light-gray: #f1f5f9;
+  --bg: #ffffff;
+  --border: #e2e8f0;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  color: var(--dark);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.logo span { color: var(--primary); }
+
+.main-nav { display: flex; gap: 28px; }
+
+.main-nav a {
+  color: var(--gray);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover, .main-nav a.active { color: var(--primary); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+  padding: 80px 0 64px;
+  text-align: center;
+}
+
+.hero-tag {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.hero h1 span { color: var(--primary); }
+
+.hero-sub {
+  color: var(--gray);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(15, 118, 110, 0.3);
+}
+
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(15, 118, 110, 0.4); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover { background: var(--primary-light); }
+
+/* ===== Ad Slots ===== */
+.ad-slot {
+  background: var(--light-gray);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  margin: 32px auto;
+  text-align: center;
+  max-width: 1140px;
+}
+
+.ad-leaderboard { padding: 24px; max-width: 1140px; }
+.ad-rectangle { padding: 20px; max-width: 400px; }
+
+.ad-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.ad-placeholder {
+  color: var(--gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== Section ===== */
+.section { padding: 64px 0; }
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* ===== Featured ===== */
+.featured-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+}
+
+.featured-card .badge {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.featured-card h3 { font-size: 1.8rem; margin: 16px 0 8px; }
+.featured-card h3 a { color: #fff; text-decoration: none; }
+.featured-card .meta { opacity: 0.8; font-size: 0.9rem; }
+.featured-card p { opacity: 0.95; }
+.read-more { color: #fff; font-weight: 600; text-decoration: underline; display: inline-block; margin-top: 12px; }
+
+/* ===== Articles Grid ===== */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.article-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.article-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.card-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.article-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.article-card h3 a { color: var(--dark); text-decoration: none; }
+.article-card h3 a:hover { color: var(--primary); }
+.article-card .meta { color: var(--gray); font-size: 0.85rem; margin-bottom: 10px; }
+.article-card p { color: var(--gray); font-size: 0.95rem; }
+
+/* ===== Categories ===== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: var(--light-gray);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--dark);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.category-card:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+/* ===== About ===== */
+.about { background: var(--light-gray); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.about-text p { color: var(--gray); margin-bottom: 16px; }
+.about-stats { display: grid; gap: 20px; }
+.stat {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.stat strong { display: block; font-size: 1.8rem; color: var(--primary); }
+.stat span { color: var(--gray); font-size: 0.9rem; }
+
+/* ===== Newsletter ===== */
+.newsletter-box {
+  background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+  color: #fff;
+}
+.newsletter-box h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.newsletter-box p { opacity: 0.85; margin-bottom: 24px; }
+.newsletter-form { display: flex; gap: 12px; max-width: 460px; margin: 0 auto; }
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-family: var(--font);
+}
+.form-note { margin-top: 16px; font-weight: 600; }
+
+/* ===== Footer ===== */
+.site-footer { background: var(--dark); color: #cbd5e1; padding: 48px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+.footer-brand .logo { color: #fff; }
+.footer-brand p { margin-top: 12px; opacity: 0.7; font-size: 0.9rem; }
+.footer-links h4 { color: #fff; margin-bottom: 16px; }
+.footer-links a { display: block; color: #cbd5e1; text-decoration: none; margin-bottom: 10px; font-size: 0.9rem; }
+.footer-links a:hover { color: var(--primary-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.footer-bottom p { margin-bottom: 4px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .main-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .about-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .featured-card { padding: 28px; }
+  .featured-card h3 { font-size: 1.4rem; }
+}
